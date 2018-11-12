@@ -34,7 +34,7 @@ public class Magpie2 {
 		String trimmed = statement.trim();
 		if (trimmed.length() == 0){
 			response = "Say something, please.";
-		} else if (statement.indexOf("no") >= 0) {
+		} else if (statement.indexOf(" no ") >= 0) {
 			response = "Why so negative?";
 		} else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
@@ -43,8 +43,12 @@ public class Magpie2 {
 			response = "Tell me more about your family.";
 		} else if (statement.indexOf("dog") >= 0 || statement.indexOf("cat") >= 0){
 			response = "Tell me more about your pets.";
-		} else if (statement.indexOf("Mr. Padjent") >= 0){
+		} else if (statement.indexOf("Mr.") >= 0 || statement.indexOf("Ms.") >= 0){
 			response = "Sounds like great teacher.";
+		} else if (statement.indexOf("bot") >= 0){
+			response = "I AM NOT A BOT!!!!!!!!";
+		} else if (statement.indexOf("connor") >= 0){
+			response = "Connor is a big loser. He doesn't have any Victory Royales.";
 		} else {
 			response = getRandomResponse();
 		}
