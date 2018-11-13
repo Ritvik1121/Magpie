@@ -1,5 +1,5 @@
+Activity 1
 Exploration
-
 How does it respond to "Where do you come from"?
 "Most of my parts can be bought at better-stocked hardware stores and assembled by a typical high-school student."
 
@@ -16,3 +16,4 @@ Questions
 1. Who, what, when, where, why, and no.
 
 Activity 2
+1. The bot still detects the key word even if it is embedded into another word causing for the bot to respond with the response programmed for that keyword.
