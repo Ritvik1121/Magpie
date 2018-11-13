@@ -49,6 +49,8 @@ public class Magpie2 {
 			response = "I AM NOT A BOT!!!!!!!!";
 		} else if (statement.indexOf("connor") >= 0){
 			response = "Connor is a big loser. He doesn't have any Victory Royales.";
+		} else if (statement.indexOf("joke") >= 0){
+			response = "The past, present, and future walk into a bar. It was tense. HAHAHAHAHAHA";
 		} else {
 			response = getRandomResponse();
 		}
