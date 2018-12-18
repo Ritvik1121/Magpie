@@ -4,14 +4,14 @@
  * <li>
  * Uses advanced search for keywords</li>
  * </ul>
- * 
+ *
  * @author Laurie White
  * @version April 2012
  */
 public class Magpie3 {
 	/**
 	 * Get a default greeting
-	 * 
+	 *
 	 * @return a greeting
 	 */
 	public String getGreeting() {
@@ -20,7 +20,7 @@ public class Magpie3 {
 
 	/**
 	 * Gives a response to a user statement
-	 * 
+	 *
 	 * @param statement
 	 *            the user statement
 	 * @return a response based on the rules given
@@ -36,6 +36,14 @@ public class Magpie3 {
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (findKeyword(statement, "dog") >= 0){
+			response = "Tell me more about your pets.";
+		} else if (findKeyword(statement, "teacher") >= 0){
+			response = "Sounds like great teacher.";
+		} else if (findKeyword(statement, "bot") >= 0){
+			response = "I AM NOT A BOT!!!!!!!!";
+		} else if (findKeyword(statement, "connor") >= 0){
+			response = "Connor is a big loser. He doesn't have any Victory Royales.";
 		} else {
 			response = getRandomResponse();
 		}
@@ -46,7 +54,7 @@ public class Magpie3 {
 	 * Search for one word in phrase. The search is not case sensitive. This
 	 * method will check that the given goal is not a substring of a longer
 	 * string (so, for example, "I know" does not contain "no").
-	 * 
+	 *
 	 * @param statement
 	 *            the string to search
 	 * @param goal
@@ -103,7 +111,7 @@ public class Magpie3 {
 	 * method will check that the given goal is not a substring of a longer
 	 * string (so, for example, "I know" does not contain "no"). The search
 	 * begins at the beginning of the string.
-	 * 
+	 *
 	 * @param statement
 	 *            the string to search
 	 * @param goal
@@ -117,7 +125,7 @@ public class Magpie3 {
 
 	/**
 	 * Pick a default response to use if nothing else fits.
-	 * 
+	 *
 	 * @return a non-committal string
 	 */
 	private String getRandomResponse() {
